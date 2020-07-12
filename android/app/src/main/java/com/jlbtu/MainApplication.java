@@ -27,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
           packages.add(new CodePush(BuildConfig.CODEPUSH_KEY, getAppicationContext(), BuildConfig.DEBUG));
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+          
           return packages;
         }
 
