@@ -9,8 +9,8 @@ import { store, persistor } from './store';
 
 import App from './App';
 
-const Index = () => (
-  
+export default function Index() {
+  return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
@@ -18,6 +18,4 @@ const Index = () => (
       </PersistGate>
     </Provider>
   );
-export default CodePush({
-  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
-})(Index);
+}
