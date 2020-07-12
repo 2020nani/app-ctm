@@ -17,14 +17,15 @@ public class MainApplication extends Application implements ReactApplication {
       new ReactNativeHost(this) {
         @Override
         public boolean getUseDeveloperSupport() {
-          return BuildConfig.DEBUG;
+          return CodePush.getJSBundleFile();
+          // return BuildConfig.DEBUG;
         }
 
         @Override
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
-         // packages.add(new CodePush(getResources().getString("R_c6YcN_gdGH7PAQ8T7OmIEz_unhvCKiIdzOu"), getApplicationContext(), BuildConfig.DEBUG));
+         packages.add(new CodePush(getResources().getString("R_c6YcN_gdGH7PAQ8T7OmIEz_unhvCKiIdzOu"), getApplicationContext(), BuildConfig.DEBUG));
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           return packages;
